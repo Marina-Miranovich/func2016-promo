@@ -48,10 +48,12 @@ main {
 body {
 	background: @theme;
 	color: @themeAccent;
+	font-family: 'PTMonoBold', 'Courier New', Courier, monospace;
 }
 
-h1 {
+h1, p {
 	margin: 0;
+	padding: 0;
 }
 
 .sr-only {
@@ -66,7 +68,7 @@ h1 {
 }
 
 header {
-	padding: 25px 15px 18px 15px;
+	padding: 25px 15px 20px 15px;
 	background: @themeAccent;
 }
 
@@ -88,8 +90,8 @@ header {
 	span {
 		display: inline-block;
 		width: 83px;
-		padding: 9px 0 9px 6px;
-		font-size: 16px;
+		padding: 8px 0 9px 7px;
+		font-size: 17px;
 		line-height: 20px;
 		vertical-align: top;
 		color: @text;
@@ -104,17 +106,17 @@ nav {
 	li {
 		display: inline-block;
 		vertical-align: top;
-		padding: 32px 5px;
+		padding: 30px 15px;
 	}
 	a {
 		font-size: 12px;
-		letter-spacing: 1.74px;
+		letter-spacing: 2.2px;
 		color: @text;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
 	.social {
-		padding: 0;
+		padding: 17px 5px;
 		a {
 			display: block;
 			width: 45px;
@@ -123,20 +125,40 @@ nav {
 			border-radius: 23px;
 			background: @theme;
 		}
+		.social-twitter {
+			padding-top: 14px;
+		}
 		.icon {
 			width: 20px;
 			height: 20px;
+		}
+		&:last-of-type {
+			padding-right: 1px;
 		}
 	}
 }
 main {
 	display: flex;
 	height: ~"calc(100% - 125px)";
-	.notice {
+	.teaser {
 		margin: auto;
-		font-family: 'PTMonoBold', 'Courier New', Courier, monospace;
+		font-size: 29px;
+		.inner {
+			max-width: 279px;
+			padding-left: 35px;
+			line-height: 35px;
+			.right-column {
+				display: inline-block;
+				float: right;
+				width: 104px;
+			}
+		}
 	}
-	p {
-		margin: 0;
-	}
+}
+
+footer {
+	max-width: 995px;
+	margin: -58px auto 0 auto;
+	padding: 15px;
+	font-size: 12px;
 }

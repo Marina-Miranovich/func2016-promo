@@ -203,9 +203,12 @@ main {
 body {
   background: #0000ff;
   color: #fff;
+  font-family: 'PTMonoBold', 'Courier New', Courier, monospace;
 }
-h1 {
+h1,
+p {
   margin: 0;
+  padding: 0;
 }
 .sr-only {
   position: absolute;
@@ -218,7 +221,7 @@ h1 {
   border: 0;
 }
 header {
-  padding: 25px 15px 18px 15px;
+  padding: 25px 15px 20px 15px;
   background: #fff;
 }
 .header-inner {
@@ -239,8 +242,8 @@ header {
 .logo span {
   display: inline-block;
   width: 83px;
-  padding: 9px 0 9px 6px;
-  font-size: 16px;
+  padding: 8px 0 9px 7px;
+  font-size: 17px;
   line-height: 20px;
   vertical-align: top;
   color: #000;
@@ -253,37 +256,57 @@ nav ul {
 nav li {
   display: inline-block;
   vertical-align: top;
-  padding: 32px 5px;
+  padding: 30px 15px;
 }
 nav a {
   font-size: 12px;
-  letter-spacing: 1.74px;
+  letter-spacing: 2.2px;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
 }
 nav .social {
-  padding: 0;
+  padding: 17px 5px;
 }
 nav .social a {
   display: block;
   width: 45px;
   height: 45px;
+  padding: 12px;
   border-radius: 23px;
   background: #0000ff;
+}
+nav .social .social-twitter {
+  padding-top: 14px;
 }
 nav .social .icon {
   width: 20px;
   height: 20px;
 }
+nav .social:last-of-type {
+  padding-right: 1px;
+}
 main {
   display: flex;
   height: calc(100% - 125px);
 }
-main .notice {
+main .teaser {
   margin: auto;
-  font-family: 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-size: 29px;
 }
-main p {
-  margin: 0;
+main .teaser .inner {
+  max-width: 279px;
+  padding-left: 35px;
+  line-height: 35px;
+}
+main .teaser .inner .right-column {
+  display: inline-block;
+  float: right;
+  width: 104px;
+}
+footer {
+  max-width: 995px;
+  margin: -58px auto 0 auto;
+  padding: 15px;
+  font-size: 12px;
 }
