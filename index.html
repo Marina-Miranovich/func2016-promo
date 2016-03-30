@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FUNC 2016</title>
+        <meta name="description" content="Frontend Union Conf 2016">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script>
+        var ajax = new XMLHttpRequest();
+        ajax.open('GET', 'img/sprites/symbol/svg/sprite.svg', true);
+        ajax.send();
+        ajax.onload = function(e) {
+            var div = document.createElement('div');
+            div.style.display = 'none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        };
+        </script>
+
+        <header>
+            <div class="header-inner">
+                <h1>
+                    <a class="logo" href="/">
+                        <img src="http://dummyimage.com/100x100/000000/fff&text=+" alt="Frontend Union Conf"/>
+                        <span>Frontend Union Conf</span>
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">for speakers</a></li>
+                        <li><a href="/">for sponsors</a></li>
+                        <li><a href="/">func 2015</a></li>
+                        <li class="social"><a href="/">
+                            <svg class="icon social-facebook">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            <span class="sr-only">facebook</span>
+                        </a></li>
+                        <li class="social"><a href="/">
+                            <svg class="icon social-twitter">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                            <span class="sr-only">twitter</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="notice" itemscope itemtype="http://schema.org/Event">
+                <meta itemprop="startDate" content="2016-08-27">
+                <p><span itemprop="name">frontendUnionConf</span> = {</p>
+                <p class="inner two-column"><span class="left-column">year:</span><span class="right-column">2016,</span></p>
+                <p class="inner two-column"><span class="left-column">month:</span><span class="right-column">Aug,</span></p>
+                <p class="inner two-column"><span class="left-column">day:</span><span class="right-column">15,</span></p>
+                <p class="inner two-column"><span class="left-column">place:</span><span class="right-column" itemprop="location" itemscope itemtype="http://schema.org/Place" >Vilnus</span></p>
+                <p>}</p>
+            </div>
+        </main>
+        <footer>
+            <p>head.exchange</p>
+            <small>Branding&Design</small>
+        </footer>
+
+        <!--script src="js/main.js"></script-->
+    </body>
+</html>

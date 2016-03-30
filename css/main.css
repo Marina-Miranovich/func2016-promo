@@ -1,0 +1,289 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+@font-face {
+  font-family: 'PTMonoBold';
+  src: url(/fonts/PTMonoBold/PTM75F_W-d69f2a589d3c03d6f9ed46557e035eae.eot);
+  src: url(/fonts/PTMonoBold/PTM75F_W-d69f2a589d3c03d6f9ed46557e035eae.eot?#iefix) format("embedded-opentype"), url(/fonts/PTMonoBold/PTM75F_W-755ee0c615ce95ce56abcf4b8df16333.woff) format("woff"), url(/fonts/PTMonoBold/PTM75F_W-24d391e9d9db77b03ad2ce8e4ad5f300.ttf) format("truetype"), url(/fonts/PTMonoBold/PTM75F_W-9c99d5089524290925e8419d76f505e5.svg#PTMono-Bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSansBold';
+  src: url(/fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot);
+  src: url(/fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot?#iefix) format("embedded-opentype"), url(/fonts/PTSansBold/PTS75F_W-bd16ec5f68232cad96aebad0ff56ecdb.woff) format("woff"), url(/fonts/PTSansBold/PTS75F_W-957766c3f1f84e1463ce93c4596fa638.ttf) format("truetype"), url(/fonts/PTSansBold/PTS75F_W-43483a365954da4173a8d76024d43dbe.svg#PTSans-Bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body,
+main {
+  height: 100%;
+}
+body {
+  background: #0000ff;
+  color: #fff;
+}
+h1 {
+  margin: 0;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+header {
+  padding: 25px 15px 18px 15px;
+  background: #fff;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 965px;
+  margin: auto;
+  font-family: 'PTSansBold', 'Courier New', Courier, monospace;
+}
+.logo {
+  text-decoration: none;
+}
+.logo img {
+  width: 74px;
+  height: 74px;
+  vertical-align: top;
+}
+.logo span {
+  display: inline-block;
+  width: 83px;
+  padding: 9px 0 9px 6px;
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+  color: #000;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 32px 5px;
+}
+nav a {
+  font-size: 12px;
+  letter-spacing: 1.74px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav .social {
+  padding: 0;
+}
+nav .social a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  background: #0000ff;
+}
+nav .social .icon {
+  width: 20px;
+  height: 20px;
+}
+main {
+  display: flex;
+  height: calc(100% - 125px);
+}
+main .notice {
+  margin: auto;
+  font-family: 'PTMonoBold', 'Courier New', Courier, monospace;
+}
+main p {
+  margin: 0;
+}
