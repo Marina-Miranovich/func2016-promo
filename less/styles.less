@@ -58,6 +58,11 @@ h1, p {
 	margin: 0;
 	padding: 0;
 }
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
 .sr-only {
 	position: absolute;
@@ -69,9 +74,13 @@ h1, p {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+.csocial-svg,
+.bsocial-svg {
+	fill: @theme;
+}
 
 header {
-	padding: 25px 15px 20px 15px;
+	padding: 20px;
 	background: @themeAccent;
 }
 
@@ -86,8 +95,8 @@ header {
 .logo {
 	text-decoration: none;
 	img {
-		width: 172px;
-		height: 74px;
+		width: 131px;
+		height: 57px;
 		vertical-align: top;
 	}
 	span {
@@ -101,14 +110,22 @@ header {
 	}
 }
 nav {
+	padding-right: 15px;
 	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			width: 26px;
+			height: 3px;
+			background: @text;
+		}
+		&:before {
+			margin: 21px 0 9px;
+		}
 	}
 	li {
-		display: inline-block;
-		vertical-align: top;
+		display: none;
 		padding: 30px 15px;
 	}
 	a {
@@ -119,44 +136,23 @@ nav {
 		text-transform: uppercase;
 	}
 	.social {
-		padding: 17px 5px;
-		a {
-			display: block;
-			width: 45px;
-			height: 45px;
-			padding: 12px;
-			border-radius: 23px;
-			background: @theme;
-		}
-		.social-twitter {
-			padding-top: 14px;
-		}
-		.icon {
-			width: 20px;
-			height: 20px;
-		}
-		&:last-of-type {
-			padding-right: 1px;
-		}
+		display: none;
 	}
 }
 main {
-	position: relative;
 	display: flex;
-	max-width: @maxWidth + ; //1156px
-	height: ~"calc(100% - 125px)";
-	margin: auto;
-	overflow: hidden;
+	height: ~"calc(100% - 97px)";
 	background-image: url("../img/bg-image.png");
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: 270px 400px;
 	.teaser {
 		margin: auto;
-		font-size: 29px;
+		font-size: 20px;
 		.inner {
 			max-width: 279px;
 			padding-left: 35px;
-			line-height: 35px;
+			line-height: 22px;
 			.right-column {
 				display: inline-block;
 				float: right;
@@ -165,30 +161,130 @@ main {
 		}
 	}
 	.bracket {
-		position: absolute;
-		width: 301px;
-		height: 508px;
-		&-left {
-			top: -174px;
-			left: -41px;
-		}
-		&-right {
-			right: -41px;
-			bottom: -219px;
-			transform: rotate(180deg);
-		}
-
+		display: none;
 	}
 }
 
 footer {
-	max-width: 995px;
-	margin: -89px auto 0 auto;
-	padding: 0 15px 49px;
+	display: flex;
+	justify-content: space-between;
+	margin: -59px auto 0 auto;
+	padding: 0 23px;
 	font-size: 18px;
+	text-align: right;
 	small {
 		display: block;
+		padding-right: 6px;
 		font-size: 65%;
 		line-height: 1;
+	}
+}
+.social {
+	display: inline-block;
+	a {
+		display: block;
+		width: 36px;
+		height: 36px;
+		padding: 11px 12px 11px 10px;
+		border-radius: 18px;
+		background: @themeAccent;
+	}
+	.social-twitter {
+		padding: 12px 11px 11px 11px;
+	}
+	.icon {
+		width: 16px;
+		height: 16px;
+	}
+	&:last-of-type {
+		padding-right: 1px;
+	}
+}
+@media screen and (min-width: 48.125em) {
+	.csocial-svg,
+	.bsocial-svg {
+		fill: @themeAccent;
+	}
+	header {
+		padding: 25px 15px 20px 15px;
+	}
+	.logo {
+		img {
+			width: 172px;
+			height: 74px;
+		}
+	}
+	nav {
+		padding: 0;
+		ul {
+			&:after,
+			&:before {
+				display: none;
+			}
+		}
+		li,
+		.social {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	main {
+		position: relative;
+		max-width: @maxWidth + 191px;
+		height: ~"calc(100% - 125px)";
+		margin: auto;
+		overflow: hidden;
+		background-size: initial;
+		.teaser {
+			font-size: 29px;
+			.inner {
+				line-height: 35px;
+			}
+		}
+		.bracket {
+			position: absolute;
+			display: block;
+			width: 301px;
+			height: 508px;
+			&-left {
+				top: -174px;
+				left: -41px;
+			}
+			&-right {
+				right: -41px;
+				bottom: -219px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+	footer {
+		display: block;
+		max-width: @maxWidth + 30px;
+		text-align: left;
+		margin: -89px auto 0 auto;
+		padding: 0 15px 49px;
+		small {
+			padding-right: 6px;
+		}
+		ul {
+			display: none;
+		}
+	}
+	.social {
+		padding: 17px 5px;
+		a {
+			width: 45px;
+			height: 45px;
+			padding: 12px;
+			border-radius: 23px;
+			background: @theme;
+		}
+		.icon {
+			width: 20px;
+			height: 20px;
+		}
+		.social-twitter {
+			padding: 14px 12px 12px 12px;
+		}
 	}
 }
