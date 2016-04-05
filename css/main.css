@@ -287,8 +287,15 @@ nav .social:last-of-type {
   padding-right: 1px;
 }
 main {
+  position: relative;
   display: flex;
+  max-width: 965px;
   height: calc(100% - 125px);
+  margin: auto;
+  overflow: hidden;
+  background-image: url("../img/bg-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 main .teaser {
   margin: auto;
@@ -303,6 +310,20 @@ main .teaser .inner .right-column {
   display: inline-block;
   float: right;
   width: 104px;
+}
+main .bracket {
+  position: absolute;
+  width: 301px;
+  height: 508px;
+}
+main .bracket-left {
+  top: -174px;
+  left: -41px;
+}
+main .bracket-right {
+  right: -41px;
+  bottom: -219px;
+  transform: rotate(180deg);
 }
 footer {
   max-width: 995px;

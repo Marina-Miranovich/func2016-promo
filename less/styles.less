@@ -3,6 +3,9 @@
 @themeAccent: #fff;
 @text: #000;
 
+// variables //
+@maxWidth: 965px;
+
 
 //  Styles //
 @font-face {
@@ -75,7 +78,7 @@ header {
 .header-inner {
 	display: flex;
 	justify-content: space-between;
-	max-width: 965px;
+	max-width: @maxWidth;
 	margin: auto;
 	font-family: 'PTSansBold', 'Courier New', Courier, monospace;
 }
@@ -138,8 +141,15 @@ nav {
 	}
 }
 main {
+	position: relative;
 	display: flex;
+	max-width: @maxWidth + ; //1156px
 	height: ~"calc(100% - 125px)";
+	margin: auto;
+	overflow: hidden;
+	background-image: url("../img/bg-image.png");
+	background-repeat: no-repeat;
+	background-position: center;
 	.teaser {
 		margin: auto;
 		font-size: 29px;
@@ -153,6 +163,21 @@ main {
 				width: 104px;
 			}
 		}
+	}
+	.bracket {
+		position: absolute;
+		width: 301px;
+		height: 508px;
+		&-left {
+			top: -174px;
+			left: -41px;
+		}
+		&-right {
+			right: -41px;
+			bottom: -219px;
+			transform: rotate(180deg);
+		}
+
 	}
 }
 
