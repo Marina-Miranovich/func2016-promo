@@ -235,7 +235,7 @@ header {
   text-decoration: none;
 }
 .logo img {
-  width: 74px;
+  width: 172px;
   height: 74px;
   vertical-align: top;
 }
@@ -334,5 +334,5 @@ footer {
 footer small {
   display: block;
   font-size: 65%;
-  line-height: 1.5;
+  line-height: 1;
 }
