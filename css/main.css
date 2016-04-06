@@ -260,19 +260,34 @@ header {
 nav {
   padding-right: 15px;
 }
-nav ul:before,
-nav ul:after {
+nav:before,
+nav:after {
   content: '';
   display: block;
   width: 26px;
   height: 3px;
   background: #000;
 }
-nav ul:before {
+nav:before {
   margin: 21px 0 9px;
 }
-nav li {
+nav.menu-opened ul {
+  display: block;
+}
+nav.menu-opened ul a {
+  color: #fff;
+}
+nav ul {
   display: none;
+  position: absolute;
+  top: 97px;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  padding: 15px 0 0 15px;
+  background: #000;
+}
+nav li {
   padding: 30px 15px;
 }
 nav a {
@@ -364,9 +379,12 @@ footer .branding-logo {
   nav {
     padding: 0;
   }
-  nav ul:after,
-  nav ul:before {
+  nav:after,
+  nav:before {
     display: none;
+  }
+  nav ul {
+    display: block;
   }
   nav li,
   nav .social {

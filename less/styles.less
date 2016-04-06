@@ -111,21 +111,34 @@ header {
 }
 nav {
 	padding-right: 15px;
-	ul {
-		&:before,
-		&:after {
-			content: '';
-			display: block;
-			width: 26px;
-			height: 3px;
-			background: @text;
-		}
-		&:before {
-			margin: 21px 0 9px;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		width: 26px;
+		height: 3px;
+		background: @text;
+	}
+	&:before {
+		margin: 21px 0 9px;
+	}
+	&.menu-opened ul {
+		display: block;
+		a {
+			color: @themeAccent;
 		}
 	}
-	li {
+	ul {
 		display: none;
+		position: absolute;
+		top: 97px;
+		left: 0;
+		right: 0;
+		bottom: 90px;
+		padding: 15px 0 0 15px;
+		background: @text;
+	}
+	li {
 		padding: 30px 15px;
 	}
 	a {
@@ -135,7 +148,7 @@ nav {
 		text-decoration: none;
 		text-transform: uppercase;
 	}
-	.social {
+	.social { 
 		display: none;
 	}
 }
@@ -220,11 +233,12 @@ footer {
 	}
 	nav {
 		padding: 0;
+		&:after,
+		&:before {
+			display: none;
+		}
 		ul {
-			&:after,
-			&:before {
-				display: none;
-			}
+			display: block;
 		}
 		li,
 		.social {
