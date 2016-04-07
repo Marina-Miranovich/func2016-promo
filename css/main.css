@@ -283,12 +283,12 @@ nav ul {
   top: 97px;
   left: 0;
   right: 0;
-  bottom: 90px;
-  padding: 15px 0 0 15px;
+  bottom: 81px;
+  padding: 26px 0 0 23px;
   background: #000;
 }
 nav li {
-  padding: 30px 15px;
+  padding: 19px 15px;
 }
 nav a {
   font-size: 12px;
@@ -383,8 +383,17 @@ footer .branding-logo {
   nav:before {
     display: none;
   }
+  nav.menu-opened ul a {
+    color: #000;
+  }
   nav ul {
+    position: static;
     display: block;
+    padding: 0;
+    background: transparent;
+  }
+  nav li {
+    padding: 30px 15px;
   }
   nav li,
   nav .social {

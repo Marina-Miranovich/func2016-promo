@@ -134,12 +134,12 @@ nav {
 		top: 97px;
 		left: 0;
 		right: 0;
-		bottom: 90px;
-		padding: 15px 0 0 15px;
+		bottom: 81px;
+		padding: 26px 0 0 23px;
 		background: @text;
 	}
 	li {
-		padding: 30px 15px;
+		padding: 19px 15px;
 	}
 	a {
 		font-size: 12px;
@@ -237,8 +237,19 @@ footer {
 		&:before {
 			display: none;
 		}
+		&.menu-opened {
+			ul a {
+				color: @text;
+			}
+		}
 		ul {
+			position: static;
 			display: block;
+			padding: 0;
+			background: transparent;
+		}
+		li {
+			padding: 30px 15px;
 		}
 		li,
 		.social {
