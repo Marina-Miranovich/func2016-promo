@@ -178,15 +178,15 @@ th {
 }
 @font-face {
   font-family: 'PTMonoBold';
-  src: url(/fonts/PTMonoBold/PTM75F_W-d69f2a589d3c03d6f9ed46557e035eae.eot);
-  src: url(/fonts/PTMonoBold/PTM75F_W-d69f2a589d3c03d6f9ed46557e035eae.eot?#iefix) format("embedded-opentype"), url(/fonts/PTMonoBold/PTM75F_W-755ee0c615ce95ce56abcf4b8df16333.woff) format("woff"), url(/fonts/PTMonoBold/PTM75F_W-24d391e9d9db77b03ad2ce8e4ad5f300.ttf) format("truetype"), url(/fonts/PTMonoBold/PTM75F_W-9c99d5089524290925e8419d76f505e5.svg#PTMono-Bold) format("svg");
+  src: url(../fonts/PTMonoBold/PTM75F_W-d69f2a589d3c03d6f9ed46557e035eae.eot);
+  src: url(../fonts/PTMonoBold/PTM75F_W-d69f2a589d3c03d6f9ed46557e035eae.eot?#iefix) format("embedded-opentype"), url(../fonts/PTMonoBold/PTM75F_W-755ee0c615ce95ce56abcf4b8df16333.woff) format("woff"), url(../fonts/PTMonoBold/PTM75F_W-24d391e9d9db77b03ad2ce8e4ad5f300.ttf) format("truetype"), url(../fonts/PTMonoBold/PTM75F_W-9c99d5089524290925e8419d76f505e5.svg#PTMono-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PTSansBold';
-  src: url(/fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot);
-  src: url(/fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot?#iefix) format("embedded-opentype"), url(/fonts/PTSansBold/PTS75F_W-bd16ec5f68232cad96aebad0ff56ecdb.woff) format("woff"), url(/fonts/PTSansBold/PTS75F_W-957766c3f1f84e1463ce93c4596fa638.ttf) format("truetype"), url(/fonts/PTSansBold/PTS75F_W-43483a365954da4173a8d76024d43dbe.svg#PTSans-Bold) format("svg");
+  src: url(../fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot);
+  src: url(../fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot?#iefix) format("embedded-opentype"), url(../fonts/PTSansBold/PTS75F_W-bd16ec5f68232cad96aebad0ff56ecdb.woff) format("woff"), url(../fonts/PTSansBold/PTS75F_W-957766c3f1f84e1463ce93c4596fa638.ttf) format("truetype"), url(../fonts/PTSansBold/PTS75F_W-43483a365954da4173a8d76024d43dbe.svg#PTSans-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }
