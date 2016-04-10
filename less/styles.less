@@ -74,8 +74,7 @@ ul {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-.csocial-svg,
-.bsocial-svg {
+.social-svg {
 	fill: @theme;
 }
 
@@ -92,21 +91,13 @@ header {
 	font-family: 'PTSansBold', 'Courier New', Courier, monospace;
 }
 
-.logo {
+.site-logo {
+	display: block;
+	height: 56px;
 	text-decoration: none;
-	img {
-		width: 131px;
+	.logo {
+		width: 132px;
 		height: 57px;
-		vertical-align: top;
-	}
-	span {
-		display: inline-block;
-		width: 83px;
-		padding: 8px 0 9px 7px;
-		font-size: 17px;
-		line-height: 20px;
-		vertical-align: top;
-		color: @text;
 	}
 }
 nav {
@@ -181,19 +172,25 @@ main {
 footer {
 	display: flex;
 	justify-content: space-between;
-	margin: -59px auto 0 auto;
-	padding: 0 23px;
+	margin: -47px auto 0 auto;
+	padding: 0 20px;
 	font-size: 18px;
 	text-align: right;
 	small {
 		display: block;
-		padding-right: 6px;
-		font-size: 65%;
+		padding-right: 17px;
+		font-size: 58%;
 		line-height: 1;
 	}
 	.branding-logo {
+		display: block;
 		position: relative;
+		height: 24px;
 		z-index: 1;
+	}
+	.logo {
+		height: 28px;
+		width: 113px;
 	}
 }
 .social {
@@ -218,17 +215,17 @@ footer {
 	}
 }
 @media screen and (min-width: 48.125em) {
-	.csocial-svg,
-	.bsocial-svg {
+	.social-svg {
 		fill: @themeAccent;
 	}
 	header {
 		padding: 25px 15px 20px 15px;
 	}
-	.logo {
-		img {
-			width: 172px;
-			height: 74px;
+	.site-logo {
+		height: 74px;
+		.logo {
+			width: 168px;
+			height: 73px;
 		}
 	}
 	nav {
@@ -250,6 +247,12 @@ footer {
 		}
 		li {
 			padding: 30px 15px;
+			a:hover {
+				color: @theme;
+			}
+			&.social a:hover {
+				background-color: @text;
+			}
 		}
 		li,
 		.social {
@@ -293,10 +296,15 @@ footer {
 		margin: -89px auto 0 auto;
 		padding: 0 15px 49px;
 		small {
+			font-size: 65%;
 			padding-right: 6px;
 		}
 		ul {
 			display: none;
+		}
+		.logo {
+			height: 24px;
+			width: 138px;
 		}
 	}
 	.social {

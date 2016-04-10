@@ -225,8 +225,7 @@ ul {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.csocial-svg,
-.bsocial-svg {
+.social-svg {
   fill: #0000ff;
 }
 header {
@@ -240,22 +239,14 @@ header {
   margin: auto;
   font-family: 'PTSansBold', 'Courier New', Courier, monospace;
 }
-.logo {
+.site-logo {
+  display: block;
+  height: 56px;
   text-decoration: none;
 }
-.logo img {
-  width: 131px;
+.site-logo .logo {
+  width: 132px;
   height: 57px;
-  vertical-align: top;
-}
-.logo span {
-  display: inline-block;
-  width: 83px;
-  padding: 8px 0 9px 7px;
-  font-size: 17px;
-  line-height: 20px;
-  vertical-align: top;
-  color: #000;
 }
 nav {
   padding-right: 15px;
@@ -328,20 +319,26 @@ main .bracket {
 footer {
   display: flex;
   justify-content: space-between;
-  margin: -59px auto 0 auto;
-  padding: 0 23px;
+  margin: -47px auto 0 auto;
+  padding: 0 20px;
   font-size: 18px;
   text-align: right;
 }
 footer small {
   display: block;
-  padding-right: 6px;
-  font-size: 65%;
+  padding-right: 17px;
+  font-size: 58%;
   line-height: 1;
 }
 footer .branding-logo {
+  display: block;
   position: relative;
+  height: 24px;
   z-index: 1;
+}
+footer .logo {
+  height: 28px;
+  width: 113px;
 }
 .social {
   display: inline-block;
@@ -365,16 +362,18 @@ footer .branding-logo {
   padding-right: 1px;
 }
 @media screen and (min-width: 48.125em) {
-  .csocial-svg,
-  .bsocial-svg {
+  .social-svg {
     fill: #fff;
   }
   header {
     padding: 25px 15px 20px 15px;
   }
-  .logo img {
-    width: 172px;
+  .site-logo {
     height: 74px;
+  }
+  .site-logo .logo {
+    width: 168px;
+    height: 73px;
   }
   nav {
     padding: 0;
@@ -394,6 +393,12 @@ footer .branding-logo {
   }
   nav li {
     padding: 30px 15px;
+  }
+  nav li a:hover {
+    color: #0000ff;
+  }
+  nav li.social a:hover {
+    background-color: #000;
   }
   nav li,
   nav .social {
@@ -437,10 +442,15 @@ footer .branding-logo {
     padding: 0 15px 49px;
   }
   footer small {
+    font-size: 65%;
     padding-right: 6px;
   }
   footer ul {
     display: none;
+  }
+  footer .logo {
+    height: 24px;
+    width: 138px;
   }
   .social {
     padding: 17px 5px;
