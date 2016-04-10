@@ -240,11 +240,13 @@ header {
   font-family: 'PTSansBold', 'Courier New', Courier, monospace;
 }
 .site-logo {
+  display: block;
+  height: 56px;
   text-decoration: none;
 }
 .site-logo .logo {
-  width: 168px;
-  height: 73px;
+  width: 132px;
+  height: 57px;
 }
 nav {
   padding-right: 15px;
@@ -317,15 +319,15 @@ main .bracket {
 footer {
   display: flex;
   justify-content: space-between;
-  margin: -59px auto 0 auto;
-  padding: 0 23px;
+  margin: -47px auto 0 auto;
+  padding: 0 20px;
   font-size: 18px;
   text-align: right;
 }
 footer small {
   display: block;
-  padding-right: 6px;
-  font-size: 65%;
+  padding-right: 17px;
+  font-size: 58%;
   line-height: 1;
 }
 footer .branding-logo {
@@ -335,8 +337,8 @@ footer .branding-logo {
   z-index: 1;
 }
 footer .logo {
-  height: 24px;
-  width: 138px;
+  height: 28px;
+  width: 113px;
 }
 .social {
   display: inline-block;
@@ -366,9 +368,12 @@ footer .logo {
   header {
     padding: 25px 15px 20px 15px;
   }
-  .logo img {
-    width: 172px;
+  .site-logo {
     height: 74px;
+  }
+  .site-logo .logo {
+    width: 168px;
+    height: 73px;
   }
   nav {
     padding: 0;
@@ -431,10 +436,15 @@ footer .logo {
     padding: 0 15px 49px;
   }
   footer small {
+    font-size: 65%;
     padding-right: 6px;
   }
   footer ul {
     display: none;
+  }
+  footer .logo {
+    height: 24px;
+    width: 138px;
   }
   .social {
     padding: 17px 5px;
