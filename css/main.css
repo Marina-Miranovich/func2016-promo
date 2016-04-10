@@ -258,9 +258,25 @@ nav:after {
   width: 26px;
   height: 3px;
   background: #000;
+  transition-property: margin, transform;
+  transition-duration: 0.2s;
+  transition-delay: 0.2s, 0s;
 }
 nav:before {
   margin: 21px 0 9px;
+}
+nav.menu-opened:before,
+nav.menu-opened:after {
+  margin: 0;
+  transition-delay: 0s, 0.2s;
+}
+nav.menu-opened:before {
+  margin-top: 23px;
+  transform: rotate(45deg);
+}
+nav.menu-opened:after {
+  margin-top: -2px;
+  transform: rotate(-45deg);
 }
 nav.menu-opened ul {
   display: block;

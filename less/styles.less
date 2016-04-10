@@ -109,14 +109,32 @@ nav {
 		width: 26px;
 		height: 3px;
 		background: @text;
+		transition-property: margin, transform;
+		transition-duration: 0.2s;
+		transition-delay: 0.2s, 0s;
 	}
 	&:before {
 		margin: 21px 0 9px;
 	}
-	&.menu-opened ul {
-		display: block;
-		a {
-			color: @themeAccent;
+	&.menu-opened {
+		&:before,
+		&:after {
+			margin: 0;
+			transition-delay: 0s, 0.2s;
+		}
+		&:before {
+			margin-top: 23px;
+			transform: rotate(45deg);
+		}
+		&:after {
+			margin-top: -2px;
+			transform: rotate(-45deg);
+		}
+		ul {
+			display: block;
+			a {
+				color: @themeAccent;
+			}
 		}
 	}
 	ul {
