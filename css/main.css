@@ -394,6 +394,12 @@ footer .logo {
   nav li {
     padding: 30px 15px;
   }
+  nav li a:hover {
+    color: #0000ff;
+  }
+  nav li.social a:hover {
+    background-color: #000;
+  }
   nav li,
   nav .social {
     display: inline-block;
