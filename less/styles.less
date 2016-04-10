@@ -74,8 +74,7 @@ ul {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-.csocial-svg,
-.bsocial-svg {
+.social-svg {
 	fill: @theme;
 }
 
@@ -92,21 +91,11 @@ header {
 	font-family: 'PTSansBold', 'Courier New', Courier, monospace;
 }
 
-.logo {
+.site-logo {
 	text-decoration: none;
-	img {
-		width: 131px;
-		height: 57px;
-		vertical-align: top;
-	}
-	span {
-		display: inline-block;
-		width: 83px;
-		padding: 8px 0 9px 7px;
-		font-size: 17px;
-		line-height: 20px;
-		vertical-align: top;
-		color: @text;
+	.logo {
+		width: 168px;
+		height: 73px;
 	}
 }
 nav {
@@ -192,8 +181,14 @@ footer {
 		line-height: 1;
 	}
 	.branding-logo {
+		display: block;
 		position: relative;
+		height: 24px;
 		z-index: 1;
+	}
+	.logo {
+		height: 24px;
+		width: 138px;
 	}
 }
 .social {
@@ -218,8 +213,7 @@ footer {
 	}
 }
 @media screen and (min-width: 48.125em) {
-	.csocial-svg,
-	.bsocial-svg {
+	.social-svg {
 		fill: @themeAccent;
 	}
 	header {

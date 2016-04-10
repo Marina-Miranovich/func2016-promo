@@ -16,6 +16,9 @@ gulp.task('default', function() {
 gulp.task ('svg', function () {
   gulp.src('./img/icons/**/*.svg')
     .pipe(svgSprite({
+      svg: {
+        namespaceClassnames: false
+      },
       mode: {
         symbol: {
           sprite: 'svg/sprite.svg'

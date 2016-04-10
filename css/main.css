@@ -225,8 +225,7 @@ ul {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.csocial-svg,
-.bsocial-svg {
+.social-svg {
   fill: #0000ff;
 }
 header {
@@ -240,22 +239,12 @@ header {
   margin: auto;
   font-family: 'PTSansBold', 'Courier New', Courier, monospace;
 }
-.logo {
+.site-logo {
   text-decoration: none;
 }
-.logo img {
-  width: 131px;
-  height: 57px;
-  vertical-align: top;
-}
-.logo span {
-  display: inline-block;
-  width: 83px;
-  padding: 8px 0 9px 7px;
-  font-size: 17px;
-  line-height: 20px;
-  vertical-align: top;
-  color: #000;
+.site-logo .logo {
+  width: 168px;
+  height: 73px;
 }
 nav {
   padding-right: 15px;
@@ -340,8 +329,14 @@ footer small {
   line-height: 1;
 }
 footer .branding-logo {
+  display: block;
   position: relative;
+  height: 24px;
   z-index: 1;
+}
+footer .logo {
+  height: 24px;
+  width: 138px;
 }
 .social {
   display: inline-block;
@@ -365,8 +360,7 @@ footer .branding-logo {
   padding-right: 1px;
 }
 @media screen and (min-width: 48.125em) {
-  .csocial-svg,
-  .bsocial-svg {
+  .social-svg {
     fill: #fff;
   }
   header {
