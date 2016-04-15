@@ -5,9 +5,12 @@
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.5.2",
     "grunt": "^0.4.5",
     "gulp": "^3.9.1",
     "gulp-less": "^3.0.5",
+    "gulp-postcss": "^6.1.0",
     "gulp-svg-sprite": "^1.2.19",
     "gulp-watch": "^4.3.5"
   },
