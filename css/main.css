@@ -258,25 +258,40 @@ nav:after {
   width: 26px;
   height: 3px;
   background: #000;
+  transition-property: margin, transform;
+  transition-duration: 0.2s;
+  transition-delay: 0.2s, 0s;
 }
 nav:before {
   margin: 21px 0 9px;
 }
+nav.menu-opened:before,
+nav.menu-opened:after {
+  margin: 0;
+  transition-delay: 0s, 0.2s;
+}
+nav.menu-opened:before {
+  margin-top: 23px;
+  transform: rotate(45deg);
+}
+nav.menu-opened:after {
+  margin-top: -2px;
+  transform: rotate(-45deg);
+}
 nav.menu-opened ul {
   display: block;
-}
-nav.menu-opened ul a {
-  color: #fff;
+  opacity: 1;
 }
 nav ul {
-  display: none;
-  position: absolute;
-  top: 97px;
+  position: fixed;
+  top: 96px;
   left: 0;
   right: 0;
   bottom: 81px;
   padding: 26px 0 0 23px;
   background: #000;
+  transition: all 0.25s ease;
+  opacity: 0;
 }
 nav li {
   padding: 19px 15px;
@@ -284,7 +299,7 @@ nav li {
 nav a {
   font-size: 12px;
   letter-spacing: 2.2px;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -382,17 +397,18 @@ footer .logo {
   nav:before {
     display: none;
   }
-  nav.menu-opened ul a {
-    color: #000;
-  }
   nav ul {
     position: static;
     display: block;
     padding: 0;
     background: transparent;
+    opacity: 1;
   }
   nav li {
     padding: 30px 15px;
+  }
+  nav li a {
+    color: #000;
   }
   nav li a:hover {
     color: #0000ff;

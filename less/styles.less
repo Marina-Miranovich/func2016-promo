@@ -18,16 +18,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-// @font-face {
-// 	font-family: 'PTSansRegular';
-// 	src: url(/assets/PTS55F_W-5b71bcc4de2a574afcc5da45eee874b2.eot);
-// 	src: url(/assets/PTS55F_W-5b71bcc4de2a574afcc5da45eee874b2.eot?#iefix) format("embedded-opentype"),
-// 		 url(/assets/PTS55F_W-9caf0274c627f723bd296f239444d513.woff) format("woff"),
-// 		 url(/assets/PTS55F_W-04e4c445148c20a2412355de271fb912.ttf) format("truetype"),
-// 		 url(/assets/PTS55F_W-d208c884404037f48bf705ccffeeebe6.svg#PTSans-Regular) format("svg");
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
 @font-face {
 	font-family: 'PTSansBold';
 	src: url(../fonts/PTSansBold/PTS75F_W-91bb9cbd28857425f756bf235d3318f0.eot);
@@ -109,25 +99,42 @@ nav {
 		width: 26px;
 		height: 3px;
 		background: @text;
+		transition-property: margin, transform;
+		transition-duration: 0.2s;
+		transition-delay: 0.2s, 0s;
 	}
 	&:before {
 		margin: 21px 0 9px;
 	}
-	&.menu-opened ul {
-		display: block;
-		a {
-			color: @themeAccent;
+	&.menu-opened {
+		&:before,
+		&:after {
+			margin: 0;
+			transition-delay: 0s, 0.2s;
+		}
+		&:before {
+			margin-top: 23px;
+			transform: rotate(45deg);
+		}
+		&:after {
+			margin-top: -2px;
+			transform: rotate(-45deg);
+		}
+		ul {
+			display: block;
+			opacity: 1;
 		}
 	}
 	ul {
-		display: none;
-		position: absolute;
-		top: 97px;
+		position: fixed;
+		top: 96px;
 		left: 0;
 		right: 0;
 		bottom: 81px;
 		padding: 26px 0 0 23px;
 		background: @text;
+		transition: all 0.25s ease;
+  		opacity: 0;
 	}
 	li {
 		padding: 19px 15px;
@@ -135,7 +142,7 @@ nav {
 	a {
 		font-size: 12px;
 		letter-spacing: 2.2px;
-		color: @text;
+		color: @themeAccent;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
@@ -234,21 +241,20 @@ footer {
 		&:before {
 			display: none;
 		}
-		&.menu-opened {
-			ul a {
-				color: @text;
-			}
-		}
 		ul {
 			position: static;
 			display: block;
 			padding: 0;
 			background: transparent;
+			opacity: 1;
 		}
 		li {
 			padding: 30px 15px;
-			a:hover {
-				color: @theme;
+			a {
+				color: @text;
+				&:hover {
+					color: @theme;
+				}
 			}
 			&.social a:hover {
 				background-color: @text;
