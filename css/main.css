@@ -402,6 +402,7 @@ footer .logo {
     display: block;
     padding: 0;
     background: transparent;
+    opacity: 1;
   }
   nav li {
     padding: 30px 15px;
